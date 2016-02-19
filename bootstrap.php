@@ -1,5 +1,7 @@
 <?php
 require_once('vendor/autoload.php');
+require_once('src/php/class/autoload.php');
+require_once('config/general.config.php');
 
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
@@ -10,10 +12,10 @@ function GetEntityManager(){
 
 	// the connection configuration
 	$dbParams = array(
-	    'driver'   => 'pdo_mysql',
-	    'user'     => 'projet-appli',
-	    'password' => 'projet-appli',
-	    'dbname'   => 'projet_appli',
+	    'driver'   => DB_DRIVER,
+	    'user'     => DB_USER,
+	    'password' => DB_PASSWORD,
+	    'dbname'   => DB_NAME
 	);
 
 	$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
