@@ -1,0 +1,7 @@
+{
+	"url_projet" : "Entrez l'URL du projet",
+	"url_dir" : "Emplacement physique du projet sur le disque dur",
+	"db_user" : "Entrez le nom d'utilisateur MySQL",
+	"db_password" : "Entrez le mot de passe de l'utilisateur MySQL",
+	"db_name" : "Entrez le nom de votre base de données"
+}

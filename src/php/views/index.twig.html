@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head lang="fr">
+		<meta charset="UTF-8">
+		<title>Projet d'application</title>
+		<script type="text/javascript" src="./lib/js/ariane.js"></script>
+
+		<base href="http://projet-appli-2016.local" />
+
+		<!-- Bootstrap Framework (sources : getbootstrap.com) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+		<!-- Hack IE -->
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Styles CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="./lib/css/global.css" />
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1><a href="">Emploi du temps</a></h1>
+			</div>
+		</header>
+
+		<nav>
+			<div class="container">
+				<ul>
+					<li><a href="./index">Accueil</a></li><li><a href="./planning">Planning</a></li><li><a href="./rechercher">Rechercher</a></li><li><a href="./admin">Administration</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<section class="container">
+
+			<form class="form-horizontal" method="POST" action="./poster/evenement">
+
+			<input type="hidden" value="poster" name="controle" />
+			<!-- Événement ponctuel -->
+			<div class="form-group">
+				<label for="evenementPonctuel" class="col-sm-4 control-label">Événement ponctuel</label>
+			    <div class="col-sm-8">
+			    	<input type="input" class="form-control" id="evenementPonctuel" placeholder="Date de l'événement" name="evenementPonctuel" />
+			    </div>
+			</div>
+
+			<div class="form-group">
+			    <label for="evenementPonctuelHD" class="col-sm-4 control-label"></label>
+			    <div class="col-sm-4">
+			    	<input type="input" class="form-control" id="evenementPonctuelHD" placeholder="Heure de début" name="evenementPonctuelHD"> 
+			    </div>
+			    <div class="col-sm-4">
+			    	<input type="input" class="form-control" id="evenementPonctuelHF" placeholder="Heure de fin" name="evenementPonctuelHF"> 
+				</div>
+
+			    <label for="evenementPonctuelHD" class="col-sm-4 control-label"></label>
+			    <div class="col-sm-8 help-block">Dans le cadre d'un événement ponctuel, saisissez une date au
+			      format JJ/MM/AAAA et saisissez l'intervalle horaire au format HH:MM.</div>
+			</div>
+
+			<div class="form-group">
+			    <label class="col-sm-4 control-label">Événement régulier</label>
+			    
+			    <label class="col-sm-2 control-label" style="text-align:left;">Lundi</label>
+				<div class="col-sm-3">
+					<input type="input" name="lundiHD" class="form-control" id="lundiHD" placeholder="Heure de début" > 
+				</div>
+				<div class="col-sm-3">
+					<input type="input" name="lundiHF" class="form-control" id="lundiHF" placeholder="Heure de fin"> 
+				</div>
+			</div>
+
+			<!-- MARDI -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label"></label>
+			    
+			    <label class="col-sm-2 control-label" style="text-align:left;">Mardi</label>
+				<div class="col-sm-3">
+					<input type="input" name="mardiHD" class="form-control" id="mardiHD" placeholder="Heure de début"> 
+				</div>
+				<div class="col-sm-3">
+					<input type="input" name="mardiHF" class="form-control" id="martinHF" placeholder="Heure de fin"> 
+				</div>
+			</div>
+
+			<!-- MERCREDI -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label"></label>
+			    
+			    <label class="col-sm-2 control-label" style="text-align:left;">Mercredi</label>
+				<div class="col-sm-3">
+					<input type="input" name="mercrediHD" class="form-control" id="mercrediHD" placeholder="Heure de début"> 
+				</div>
+				<div class="col-sm-3">
+					<input type="input" name="mercrediHF" class="form-control" id="mercrediHF" placeholder="Heure de fin"> 
+				</div>
+			</div>
+
+			<!-- JEUDI -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label"></label>
+			    
+			    <label class="col-sm-2 control-label" style="text-align:left;">Jeudi</label>
+				<div class="col-sm-3">
+					<input type="input" name="jeudiHD" class="form-control" id="jeudiHD" placeholder="Heure de début"> 
+				</div>
+				<div class="col-sm-3">
+					<input type="input" name="jeudiHF" class="form-control" id="jeudiHF" placeholder="Heure de fin"> 
+				</div>
+			</div>
+
+			<!-- VENDREDI -->
+			<div class="form-group">
+				<label class="col-sm-4 control-label"></label>
+			    
+			    <label class="col-sm-2 control-label" style="text-align:left;">Vendredi</label>
+				<div class="col-sm-3">
+					<input type="input" name="vendrediHD" class="form-control" id="vendrediHD" placeholder="Heure de début"> 
+				</div>
+				<div class="col-sm-3">
+					<input type="input" name="vendrediHF" class="form-control" id="vendrediHF" placeholder="Heure de fin"> 
+				</div>
+			</div>
+			  
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-8">
+			    	<button type="submit" class="btn btn-default">Enregistrer</button>
+			    </div>
+			</div>
+			</form>
+
+			<pre>
+				{{ CONTENU }}
+			</pre>
+		</section>
+
+		<footer>
+
+		</footer>
+	</body>
+</html>
