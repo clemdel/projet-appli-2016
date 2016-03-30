@@ -1,10 +1,4 @@
 <?php
-class user{
-	public function getUser($nom, $prenom){
-		echo $nom;
-	}
-}
-
 class routing {
 	protected $routes_config = array(); 
 	protected $routes_regex = array();
@@ -42,7 +36,7 @@ class routing {
 	}
 
 	public function getDefaultRoute(){
-		echo 'getDefaultRoute';
+		echo 'getDefaultRoute.';
 
 		return true;
 	}
