@@ -1,4 +1,10 @@
 {
+    "autoload": {
+        "psr-0": {
+            "App":"php/class/"
+        }
+    },
+
     "require": {
         "twig/twig": "~1.0"
     }
