@@ -1,12 +1,12 @@
 <?php
 $loader = require("./vendor/autoload.php");
-$loader->add("App", __DIR__ . "php/class/");
+require_once "php/autoload.php";
 
-class test extends Controller {
+class Index extends View {
     function __construct(){
         parent::__construct();
-        echo $this->twig->render("test.html");
+        echo $this->twig->render("index.html");
     }
 }
 
-new test;
+new Index;

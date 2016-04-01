@@ -1,8 +1,8 @@
 <?php
-namespace App;
 
-function __autoload($nom){
-    echo $nom;
-    if(file_exists("./class/" . $nom . '.php'))
-        include_once("./class/" . $nom . '.php');
+function _Autoload($nom){
+    if(file_exists(__DIR__."/class/" . $nom . '.php'))
+        include_once(__DIR__."/class/" . $nom . '.php');
+
 }
+spl_autoload_register("_Autoload");

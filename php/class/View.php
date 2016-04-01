@@ -1,6 +1,11 @@
 <?php
-
-class Controller {
+/**
+ * Created by PhpStorm.
+ * User: Jalal
+ * Date: 31/03/2016
+ * Time: 21:42
+ */
+class View {
     protected static $twig_path_views = "./views/";
     protected static $twig_path_cache = "./caches/";
     protected $twig;
